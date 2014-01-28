@@ -1,0 +1,51 @@
+
+#urxvt*termName: rxvt-unicode-256color
+urxvt*termName: rxvt-256color
+urxvt*buffered: true
+
+#urxvt*font: xft:Dina:pixelsize=14,style=Regular
+#:pixelsize=12
+
+URxvt*font: xft:Dina:pixelsize=10
+URxvt*boldFont: xft:Dina:pixelsize=10
+
+
+# http://www.saltycrane.com/blog/2009/11/how-make-urxvt-look-gnome-terminal/
+URxvt*letterSpace: -1
+
+urxvt*perl-ext-common: default,matcher
+urxvt*secondaryScroll:true
+urxvt*saveLines:1000
+urxvt*scrollBar: false
+urxvt*urlLauncher: firefox
+
+!urvxt*foreground: White
+!urvxt*background: black
+
+*background: #111111
+*foreground: #babdb6
+
+*color0: #000000
+*color8: #555753
+
+*color1: #ff6565
+*color9: #ff8d8d
+
+*color2: #93d44f
+*color10:#c8e7a8
+
+*color3: #eab93d
+*color11:#ffc123
+
+*color4: #204a87
+*color12:#3465a4
+
+*color5: #ce5c00
+*color13:#f57900
+
+*color6: #89b6e2
+*color14:#46a4ff
+
+*color7: #cccccc
+*color15:#ffffff
+

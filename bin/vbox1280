@@ -1,0 +1,21 @@
+#!/bin/bash
+
+#
+# great help from here
+# http://superuser.com/questions/428159/forcing-monitor-resolution-in-virtualbox-vm-on-linux-guest
+#
+
+RES0="1280 1024 60"
+
+MAP0="VBOX0"
+
+SETTINGS0=$( gtf $RES0 | grep Modeline | cut -d ' ' -f4-16 )
+
+NAME0=$( echo $SETTINGS0 | cut -d ' ' -f1 )
+
+echo "Modeline for Display 0 ($NAME0): $SETTINGS0"
+
+xrandr --newmode $SETTINGS0
+xrandr --addmode $MAP0 $NAME0
+xrandr --output $MAP0 --mode $NAME0
+

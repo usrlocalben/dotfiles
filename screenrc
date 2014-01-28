@@ -1,0 +1,73 @@
+
+startup_message off
+
+# no audible bell, please
+vbell on
+
+# detach on hangup
+autodetach on
+
+#termcapinfo rxvt-unicode ti@:te@ # enable shift pgup/pgdown scrolling
+terminfo rxvt-unicode ti@:te@:
+
+# emulate .logout message
+pow_detach_msg "Screen session of \$LOGNAME \$:cr:\$:nl:ended."
+
+# details on fixing this was found here...
+# https://bbs.archlinux.org/viewtopic.php?id=67464
+term xterm-256color
+
+attrcolor b ".I" # allow bold colors
+defbce on	#use current bg color for erased chars
+vbell off
+
+# teach screen how to set colors
+# AB=background, AF=foreground
+#terminfo xterm 'Co#256:AB=\E[48;5%dm:AF=\E[38;5;%dm'	# how to set colors
+
+#hardstatus alwayslastline
+#hardstatus string '%{= dW}%-Lw%{= dY}%50> %n*%f %t%{= dW}%+Lw%< %{= dW}%-=%D %m/%d/%y %C %A %1`%{-}'
+
+#screen -t log 9 sudo tail -f /var/log/everything.log
+#select 0
+
+
+# autoaka testing
+# shellaka '> |tcsh'
+# shellaka '$ |sh'
+
+# set every new windows hardstatus line to somenthing descriptive
+# defhstatus "screen: ^En (^Et)"
+
+defscrollback 1000
+
+# don't kill window after the process died
+# zombie "^["
+
+# enable support for the "alternate screen" capability in all windows
+altscreen on
+
+
+#remove some stupid / dangerous key bindings
+bind k
+bind ^k
+bind .
+bind ^\
+bind \\
+bind ^h
+bind h
+#make them better
+bind 'K' kill
+bind 'I' login on
+bind 'O' login off
+bind '}' history
+
+
+# bind = resize =
+# bind + resize +1
+# bind - resize -1
+# bind _ resize max
+#
+# defnonblock 1
+# blankerprg rain -d 100
+# idle 30 blanker
