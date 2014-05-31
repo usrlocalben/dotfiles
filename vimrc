@@ -1,3 +1,19 @@
+" some help getting .vim in windows from here:
+" http://stackoverflow.com/questions/10612362/
+
+if has("gui_running")
+  if has("gui_win32")
+    let g:my_vim_dir=expand("$HOME/.vim")
+    execute "set rtp^=".g:my_vim_dir
+    set guifont=Dina:h9:cANSI
+    set guioptions-=l
+    set guioptions-=r
+    set guioptions-=b
+    set guioptions-=m
+    set guioptions-=T
+  endif
+endif
+
 let loaded_matchparen = 1
 set nocompatible
 set bs=2
@@ -58,14 +74,3 @@ noremap P P`[
 "hi CursorLine cterm=NONE ctermbg=darkgrey
 "set cursorline
 
-if has("gui_running")
-  if has("gui_win32")
-    set guifont=Dina:h9:cANSI
-    set guioptions-=l
-    set guioptions-=r
-    set guioptions-=b
-    set guioptions-=m
-    set guioptions-=T
-  endif
-endif
-    
