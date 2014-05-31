@@ -74,3 +74,5 @@ noremap P P`[
 "hi CursorLine cterm=NONE ctermbg=darkgrey
 "set cursorline
 
+filetype plugin indent on
+
